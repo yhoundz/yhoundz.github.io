@@ -11,7 +11,7 @@
 
 body {
     background: var(--motif-color);
-    font-family:Inter;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     text-align: left;
     color: var(--text-color);
     padding: 0;
