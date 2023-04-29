@@ -3,8 +3,8 @@ let header = `
         <ul>
             <li><a href="#">alexander wang</a></li>
             <span style="float:right;">
-                <li><a href="https://www.instagram.com/al_xrw/" target="_blank"><img src="../svgs/Instagram_Glyph_White.png" class="imglink"></a></li>
-                <li><a href="mailto:alexrw008@gmail.com" target="_blank"><img src="../svgs/mail_icon.png" class="imglink"></a></li>
+                <li><a href="https://www.instagram.com/al_xrw/" target="_blank"><img src="svgs/instagram.svg" class="imglink"></a></li>
+                <li><a href="mailto:alexrw008@gmail.com" target="_blank"><img src="svgs/mail.svg" class="imglink"></a></li>
             </span>
         </ul>
     </nav>
