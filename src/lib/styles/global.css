@@ -1,0 +1,78 @@
+/* --- FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Righteous&family=Space+Mono:wght@400;700&display=swap');
+@import './variables.css';
+
+/* --- RESET & BASE --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    overflow-x: hidden;
+    cursor: none;
+    /* Custom cursor */
+}
+
+/* Noise overlay removed per user request */
+
+
+/* Dither moved to hero section only */
+
+/* --- CUSTOM CURSOR (DISABLED FOR PERFORMANCE) --- */
+body {
+    cursor: auto !important;
+}
+
+/* Hiding cursor elements */
+:global(.cursor-dot),
+:global(.cursor-outline) {
+    display: none !important;
+}
+
+/* --- UTILITIES --- */
+.text-display {
+    font-family: var(--font-display);
+}
+
+.text-serif {
+    font-family: var(--font-serif);
+}
+
+.text-mono {
+    font-family: var(--font-mono);
+}
+
+/* Selection */
+::selection {
+    background: var(--color-acid-green);
+    color: black;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-main);
+    border-left: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-electric-blue);
+    border: 2px solid var(--color-bg-main);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-hot-pink);
+}

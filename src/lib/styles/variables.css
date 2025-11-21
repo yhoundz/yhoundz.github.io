@@ -1,0 +1,54 @@
+:root {
+  /* Typography */
+  --font-display: 'Righteous', sans-serif;
+  /* Playfair Display: Italic serif for contrast */
+  --font-serif: 'Playfair Display', serif;
+  /* Space Mono: Raw data/glitch text */
+  --font-mono: 'Space Mono', monospace;
+  /* Plus Jakarta Sans: Body text */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* --- PALETTE: ACID POP --- */
+  /* Backgrounds */
+  --color-bg-main: #F0F0F0;
+  /* Harsh off-white */
+  --color-bg-secondary: #E6E6E6;
+
+  /* Text */
+  --color-text-main: #000000;
+  /* Pure black */
+  --color-text-muted: #444444;
+  --color-text-light: #FFFFFF;
+
+  /* Accents (High Saturation) */
+  --color-acid-green: #CCFF00;
+  --color-hot-pink: #FF0099;
+  --color-electric-blue: #0066FF;
+  --color-deep-purple: #6600FF;
+  --color-neon-orange: #FF3300;
+
+  /* Gradients */
+  --gradient-chaos: linear-gradient(45deg, var(--color-acid-green), var(--color-hot-pink), var(--color-electric-blue));
+  --gradient-noise: repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%);
+
+  /* --- TEXTURES & MATERIALS --- */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-blur: 10px;
+  --glass-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+  --border-radius-blob: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  --border-radius-sharp: 0px;
+
+  /* --- LAYOUT --- */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 5rem;
+  --spacing-xl: 10rem;
+
+  --container-width: 1600px;
+  /* Wider for chaos */
+}
+
+/* No Dark Mode - Light Mode Only as requested */
