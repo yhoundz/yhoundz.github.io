@@ -9,6 +9,7 @@
 		{ name: 'ABOUT', href: '#about' },
 		{ name: 'PROJECTS', href: '#projects' },
 		{ name: 'EXPERIENCE', href: '#experience' },
+		{ name: 'EDUCATION', href: '#education' },
 		{ name: 'CONTACT', href: '#contact' }
 	];
 </script>
