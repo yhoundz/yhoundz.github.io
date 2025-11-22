@@ -61,7 +61,7 @@
 		</h1>
 
 		<p class="hero-subtext fade-in delay-1">
-			Aspiring Backend/Systems Software Engineer
+			Computer Science Student. Aspiring Backend/Systems Software Engineer.
 			<br />Looking for Summer 2026 Opportunities.
 		</p>
 
@@ -77,7 +77,7 @@
 
 		<!-- Mouse position tracker -->
 		<div class="mouse-tracker fade-in delay-3">
-			<div class="tracker-label">CURSOR</div>
+			<!-- <div class="tracker-label">CURSOR</div> -->
 			<div class="tracker-coords">X: {Math.round(blobX)} <br /> Y: {Math.round(blobY)}</div>
 		</div>
 	</div>
@@ -259,6 +259,7 @@
 	}
 
 	.scroll-indicator {
+		user-select: none;
 		position: absolute;
 		bottom: 2rem;
 		animation: blink 1s infinite;
@@ -290,6 +291,7 @@
 	}
 
 	.tracker-coords {
+		user-select: none;
 		color: var(--color-text-muted);
 		font-size: 0.75rem;
 	}

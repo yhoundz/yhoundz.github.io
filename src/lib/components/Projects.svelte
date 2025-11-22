@@ -5,7 +5,7 @@
 	const projects = [
 		{
 			title: 'PARM',
-			subtitle: 'PACKAGE MANAGER',
+			subtitle: 'PACKAGE MANAGER CLI TOOL',
 			tags: ['Go', 'REST', 'Cobra'],
 			link: 'https://github.com/yhoundz/parm',
 			rotation: '2deg',
@@ -13,7 +13,7 @@
 		},
 		{
 			title: 'WHEY',
-			subtitle: 'REGISTRY BACKEND',
+			subtitle: 'BACKEND REGISTRY SERVICE',
 			tags: ['.NET', 'Docker', 'PostgreSQL', 'Azure'],
 			link: '',
 			rotation: '-3deg',
@@ -22,14 +22,14 @@
 		{
 			title: 'SOS',
 			subtitle: 'APPLIED AI SIMULATIONS',
-			tags: ['Python', 'ReinforcementLearning', 'Jupyter'],
+			tags: ['Python', 'RL', 'Jupyter'],
 			link: 'https://github.com/SGAI-Team-A/SOS',
 			rotation: '1deg',
 			desc: 'Simulation exploring risk-based decision making and ethical dilemnas by AI models in crisis scenarios.'
 		},
 		{
 			title: 'HELLBOUND TO HEAVEN',
-			subtitle: 'PLATFORMER',
+			subtitle: 'PHYSICS PLATFORMING GAME',
 			tags: ['GDScript', 'Godot'],
 			link: 'https://github.com/yhoundz/hellbound-to-heaven',
 			rotation: '-2deg',
@@ -200,6 +200,7 @@
 	}
 
 	.symbol {
+		user-select: none;
 		position: absolute;
 		font-size: 12rem;
 		font-weight: 900;

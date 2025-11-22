@@ -7,7 +7,8 @@
 			school: 'UNIVERSITY OF TEXAS AT AUSTIN',
 			degree: 'BS, COMPUTER SCIENCE',
 			year: '2028',
-			description: 'Specializing in AI/ML and Graphics. Building the future of digital chaos.',
+			description:
+				'Coursework: Data Structures, Discrete Math, Computer Architecture, Operating Systems',
 			rotation: '-4deg',
 			top: '-10%',
 			color: 'var(--color-acid-green)'
@@ -263,6 +264,7 @@
 	}
 
 	.symbol {
+		user-select: none;
 		position: absolute;
 		font-size: 10rem;
 		font-weight: 900;

@@ -205,6 +205,7 @@
 	}
 
 	.symbol {
+		user-select: none;
 		position: absolute;
 		font-size: 10rem;
 		font-weight: 900;
