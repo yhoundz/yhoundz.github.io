@@ -1,7 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
+	import MenuOverlay from './MenuOverlay.svelte';
 
 	let isScrolled = false;
+	let isMenuOpen = false;
+	let menuTimeout;
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -11,30 +14,73 @@
 		return () => window.removeEventListener('scroll', handleScroll);
 	});
 
-	const links = [
-		{ name: 'PROJECTS', href: '#projects', pos: 'top-right' },
-		{ name: 'EXPERIENCE', href: '#experience', pos: 'bottom-left' },
-		{ name: 'SAY HELLO', href: '#contact', pos: 'bottom-right' }
-	];
+	// --- HOVER LOGIC (Desktop) ---
+	function handleMouseEnter() {
+		// Clear any pending close timer
+		clearTimeout(menuTimeout);
+		isMenuOpen = true;
+	}
+
+	function handleMouseLeave() {
+		// Add a small delay before closing to prevent flickering if moving mouse quickly
+		menuTimeout = setTimeout(() => {
+			isMenuOpen = false;
+		}, 1500);
+	}
+
+	// --- CLICK LOGIC (Mobile/Force) ---
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
+
+	function closeMenu() {
+		isMenuOpen = false;
+	}
 </script>
 
 <nav class="nav-chaos">
+	<!-- LOGO (Top-Left) -->
 	<a href="/" class="logo">
 		<span class="logo-text">ALEX</span>
 		<div class="logo-dot"></div>
 	</a>
 
-	{#each links as link}
-		<a href={link.href} class="nav-link {link.pos}">
-			{link.name}
-		</a>
-	{/each}
+	<!-- MENU TRIGGER (Top-Right) -->
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<div
+		class="nav-link top-right menu-trigger"
+		on:mouseenter={handleMouseEnter}
+		on:mouseleave={handleMouseLeave}
+		on:click={toggleMenu}
+	>
+		MENU
+	</div>
+
+	<!-- RESUME (Bottom-Left) -->
+	<a href="/resume.pdf" target="_blank" class="nav-link bottom-left">
+		RESUME
+	</a>
+
+	<!-- SAY HELLO (Bottom-Right) -->
+	<a href="#contact" class="nav-link bottom-right">
+		SAY HELLO
+	</a>
 
 	<div class="status-indicator">
 		<div class="status-dot"></div>
 		<span>ONLINE</span>
 	</div>
 </nav>
+
+<!-- MENU OVERLAY -->
+<!-- Pass mouse handlers to keep it open when hovering the overlay itself -->
+<MenuOverlay
+	isOpen={isMenuOpen}
+	onClose={closeMenu}
+	on:mouseenter={handleMouseEnter}
+	on:mouseleave={handleMouseLeave}
+/>
 
 <style>
 	.nav-chaos {
@@ -61,6 +107,7 @@
 		display: flex;
 		align-items: flex-end;
 		gap: 5px;
+		z-index: 2001; /* Above menu overlay if needed, or same level */
 	}
 
 	.logo-dot {
@@ -82,6 +129,8 @@
 		padding: 10px 20px;
 		border: 1px solid transparent;
 		transition: all 0.3s ease;
+		cursor: pointer;
+		background: transparent; /* Ensure hit area */
 	}
 
 	.nav-link:hover {
@@ -94,6 +143,12 @@
 		top: var(--spacing-md);
 		right: var(--spacing-md);
 		transform: rotate(5deg);
+		z-index: 2001; /* Ensure trigger is clickable above overlay if needed */
+	}
+
+	/* Specific hover state for menu trigger to match rotation */
+	.top-right:hover {
+		transform: rotate(0deg) scale(1.1);
 	}
 
 	.bottom-left {
