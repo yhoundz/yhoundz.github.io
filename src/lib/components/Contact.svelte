@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="footer-chaos">
-		<p>© MMXXV ALEXANDER WANG // CREATED USING GEMINI 3.0</p>
+		<p>© MMXXV ALEXANDER WANG</p>
 	</div>
 </section>
 
