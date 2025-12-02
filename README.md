@@ -10,4 +10,4 @@ bun install
 bun run dev
 ```
 
-This website was created using SvelteKit (using TypeScript), Vite, and Bun with the help of Gemini 3.0.
+This website was created using SvelteKit (using TypeScript), Vite, and Bun.
